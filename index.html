@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculator</title>
+    <link rel="icon" type="image/vnd.microsoft.icon" href="assets/favicon.ico">
+    <link rel='stylesheet' href='styles/style.css'>
+</head>
+<body>
+    <main>
+
+        <div class='container'>
+            <form class='calculator'>
+                <h3 class='title'>
+                    Chape prepare
+                </h3>
+                <h4>
+                    <label for='surface-screed'>
+                        Surface (m2)
+                    </label>
+                </h4>
+                <input type='number' id="surface-screed" placeholder='Surface'>
+                <h4>
+                    <label for='thick-screed' >
+                        Epaisseur (CM):
+                    </label>
+                </h4>
+                <input type='number' id="thick-screed" placeholder='Epaisseur'>
+                <div class='wrapper'>
+                    <div class='wrapper-coeck'>
+                        <h4>Chape préparée prête à l'emploi COECK</h4>
+                        <p id='result-screed'>Quantité de chape: </p>
+                        <p id='result-screed-bag'>Nombre de sacs de 25kg: </p>
+                    </div>
+                    <div class='wrapper-by-bag'>
+                        <div class='wrapper-by-bag-item'>
+                            <h4>
+                                Quantité de ciment:
+                                <span id='result-cement'></span>
+                            </h4>
+                            <div class='wrapper-by-bag-item-elem'>
+                                <p id='result-cement-bag-25'>Nombre de sacs de 25kg: </p>
+                                <p id='result-cement-bag-40'>Nombre de sacs de 40kg: </p>
+                            </div>
+                        </div>
+
+                        <div class='wrapper-by-bag-item'>
+                            <h4>
+                                Quantité de sable du Rhin:
+                                <span id='result-sand'></span>
+                            </h4>
+                            <div class='wrapper-by-bag-item-elem'>
+                                <p id='result-sand-bag-25'>Nombre de sacs de 25kg: </p>
+                                <p id='result-sand-bag-40'>Nombre de sacs de 40kg: </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <div class='container'>
+            <form class='calculator'>
+                <h3 class='title'>
+                    Beton prepare
+                </h3>
+                <h4>
+                    <label for='surface-concrete'>
+                        Surface (m2)
+                    </label>
+                </h4>
+                <input type='number' id='surface-concrete' placeholder='Surface'>
+                <h4>
+                    <label for='thick-concrete' >
+                        Epaisseur (CM):
+                    </label>
+                </h4>
+                <input type='number' id='thick-concrete' placeholder='Epaisseur'>
+                <div class='wrapper'>
+                    <div class='wrapper-coeck'>
+                        <h4>Beton préparée prête à l'emploi COECK</h4>
+                        <p id='result-concrete'>Quantité de beton: </p>
+                        <p id='result-concrete-bag'>Nombre de sacs de 25kg: </p>
+                    </div>
+                    <div class='wrapper-by-bag'>
+                        <div class='wrapper-by-bag-item'>
+                            <h4>
+                                Quantité de ciment:
+                                <span id='result-concrete-cement'></span>
+                            </h4>
+                            <div class='wrapper-by-bag-item-elem'>
+                                <p id='result-concrete-cement-bag-25'>Nombre de sacs de 25kg: </p>
+                                <p id='result-concrete-cement-bag-40'>Nombre de sacs de 40kg: </p>
+                            </div>
+                        </div>
+
+                        <div class='wrapper-by-bag-item'>
+                            <h4>
+                                Quantité de gravier:
+                                <span id='result-gravel'></span>
+                            </h4>
+                            <div class='wrapper-by-bag-item-elem'>
+                                <p id='result-gravel-bag-25'>Nombre de sacs de 25kg: </p>
+                                <p id='result-gravel-bag-40'>Nombre de sacs de 40kg: </p>
+                            </div>
+                        </div>
+
+                        <div class='wrapper-by-bag-item'>
+                            <h4>
+                                Quantité de sable du Rhin:
+                                <span id='result-concrete-sand'></span>
+                            </h4>
+                            <div class='wrapper-by-bag-item-elem'>
+                                <p id='result-concrete-sand-bag-25'>Nombre de sacs de 25kg: </p>
+                                <p id='result-concrete-sand-bag-40'>Nombre de sacs de 40kg: </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <div class='container'>
+            <form class='calculator'>
+                <h3 class='title'>
+                    Volume de la béton prepare
+                </h3>
+                <h4>
+                    <label for='volume-beton'>
+                        Volume de la béton (m3)
+                    </label>
+                </h4>
+                <input type='number' id="volume-beton" placeholder='Volume de la béton'>
+                <div class='wrapper'>
+                    <div class='wrapper-coeck'>
+                        <h4>Beton préparée prête à l'emploi COECK</h4>
+                        <p id='result-concrete-volume'>Quantité de beton: </p>
+                        <p id='result-concrete-volume-bag'>Nombre de sacs de 25kg: </p>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <div class='container'>
+            <form class='calculator'>
+                <h3 class='title'>
+                    Cloison Gyproc
+                </h3>
+                <h4>
+                    <label for='room-width'>
+                        Largeur de la pièce (M)
+                    </label>
+                </h4>
+                <input type='number' id="room-width" placeholder='Largeur de la pièce '>
+                <h4>
+                    <label for='room-height'>
+                        Hauteur de la pièce (Maximum 3m)
+                    </label>
+                </h4>
+                <input type='number' id='room-height' placeholder='Hauteur de la pièce' min='0.5' max='3'>
+                <div class='wrapper'>
+                    <h4>
+                        Vertical:
+                    </h4>
+                    <span class='result-vertical'></span>
+                    <h4>
+                        Horizontal:
+
+                    </h4>
+                    <span class="result-horizontal"></span>
+                </div>
+            </form>
+        </div>
+
+        <div class='container'>
+            <form class='calculator'>
+                <h3 class='title'>
+                    Faux Plafond
+                </h3>
+                <h4>
+                    <label for='ceiling-width'>
+                        Largeur de la plafond
+                    </label>
+                </h4>
+                <input type='number' id="ceiling-width" placeholder='Largeur de la plafond'>
+                <h4>
+                    <label for='ceiling-length'>
+                        Longueur de la plafond
+                    </label>
+                </h4>
+                <input type='number' id='ceiling-length' placeholder='Longueur de la plafond'>
+                <div class='wrapper-plafond'>
+                    <div class='wrapper-elem'>
+                        <h4>
+                            Porteur:
+                        </h4>
+                        <span id='result-holder'></span>
+                        <h4>
+                            Contour:
+                        </h4>
+                        <span id='result-outline'></span>
+                    </div>
+
+                    <div class='wrapper-elem'>
+                        <h4>
+                            Suspente:
+                        </h4>
+                        <span id='result-suspension'></span>
+                        <h4>
+                            Cavalier:
+                        </h4>
+                        <span id='result-cavalier'></span>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+    </main>
+</body>
+<script src='javascript/calculateScreed.js'></script>
+<script src='javascript/calculateConcrete.js'></script>
+<script src='javascript/calculateVolumeConcrete.js'></script>
+<script src='javascript/calculateResultWall.js'></script>
+<script src='javascript/calculateResultCeiling.js'></script>
+</html>
