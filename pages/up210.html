@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Consommation Knauf UP210</title>
+    <link rel='stylesheet' href='../styles/style.css'>
+</head>
+<body>
+<div class='container'>
+  <form class='calculator'>
+    <h3>
+      Consommation KNAUF UP210
+    </h3>
+    <label for='knauf-up210'>
+
+    </label>
+    <select id='knauf-up210' onchange='calculateUp210()'>
+      <option value='' disabled selected hidden="">
+        Choisir épaisseur de la couche
+      </option>
+      <option value='1.6'>
+        Épaisseur de la couche 10mm
+      </option>
+      <option value='1.1'>
+        Épaisseur de la couche 15mm
+      </option>
+    </select>
+    <label for='surface-up210'>
+      Surface du mur (m2)
+    </label>
+    <input type='number' id='surface-up210' placeholder='Surface du mur' />
+    <div class='wrapper'>
+      <span id='result-up210-kg'>Quantité de Up210:</span>
+      <span id='result-up210-bag'>Nombre de sacs de 25kg:</span>
+    </div>
+  </form>
+</div>
+
+</body>
+<script src='../javascript/calculateUp210.js'></script>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Consommation KNAUF MP75</title>
+    <link rel='stylesheet' href='../styles/style.css' />
+</head>
+<body>
+    <div class='container'>
+        <form class='calculator'>
+            <h3 class='title'>
+                Consommation Knauf MP75
+            </h3>
+            <h4>
+                <label for='surface-mp'>
+                    Surface (m2)
+                </label>
+            </h4>
+            <input type='number' id='surface-mp' placeholder='Surface' />
+            <div class='wrapper'>
+                <h5>Épaisseur de couche en moyenne 10 mm</h5>
+                <span id='result-mp-kg'>Quantité de produits:</span>
+                <span id='result-mp'>Nombre de sacs de 25kg:</span>
+            </div>
+        </form>
+    </div>
+</body>
+<script src='../javascript/calculateMP.js'></script>
+</html>

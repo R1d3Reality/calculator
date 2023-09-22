@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Consommation l'egaline Mapei</title>
+    <link rel='stylesheet' href='../styles/style.css'>
+</head>
+<body>
+<div class='container'>
+  <form class='calculator'>
+    <h3 class='title'>
+      Consommation l'egaline Mapei
+    </h3>
+    <h4>
+      <label for='mapei'>
+        Choisir l'egaline Mapei
+      </label>
+    </h4>
+    <select id='mapei' onchange='calculateMapei()'>
+      <option value='' disabled selected hidden=''>Choisir la bonne taille de bloc</option>
+      <option value='1.8'>Ultraplan Renovation Fibre (3mm a 40mm)</option>
+      <option value='1.6'>Ultraplan Basic XTRA (1mm a 10mm)</option>
+      <option value='1.7'>Ultraplan MAXI(3mm a 40mm)</option>
+    </select>
+    <h4>
+      <label for='surface-mapei'>
+        Surface au sol (m2)
+      </label>
+    </h4>
+    <input type='number' id='surface-mapei' placeholder='Surface au sol' />
+    <h4>
+      <label for='thick-mapei'>
+        Epaisseur (mm)
+      </label>
+    </h4>
+    <input type='number' id='thick-mapei' placeholder='Epaisseur (mm)'>
+    <span id='result-mapei-bag'></span>
+  </form>
+</div>
+
+</body>
+<script src='../javascript/calculateMapei.js'></script>
+</html>
