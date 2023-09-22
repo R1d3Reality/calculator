@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel='stylesheet' href='../styles/style.css'>
+</head>
+<body>
+<div class='container'>
+    <form class='calculator'>
+        <h3 class='title'>
+            Volume du béton prepare
+        </h3>
+        <h4>
+            <label for='volume-beton'>
+                Volume du béton (m3)
+            </label>
+        </h4>
+        <input type='number' id="volume-beton" placeholder='Volume du béton'>
+        <div class='wrapper'>
+            <div class='wrapper-coeck'>
+                <h4>Beton préparée prête à l'emploi COECK</h4>
+                <p id='result-concrete-volume'>Quantité de beton: </p>
+                <p id='result-concrete-volume-bag'>Nombre de sacs de 25kg: </p>
+            </div>
+        </div>
+    </form>
+</div>
+</body>
+<script src='../javascript/calculateVolumeConcrete.js'></script>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel='stylesheet' href='../styles/style.css'>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class='container'>
+  <form class='calculator'>
+    <h3 class='title'>
+      Chape prepare
+    </h3>
+    <h4>
+      <label for='surface-screed'>
+        Surface (m2)
+      </label>
+    </h4>
+    <input type='number' id="surface-screed" placeholder='Surface'>
+    <h4>
+      <label for='thick-screed' >
+        Epaisseur (CM):
+      </label>
+    </h4>
+    <input type='number' id="thick-screed" placeholder='Epaisseur'>
+    <div class='wrapper'>
+      <div class='wrapper-coeck'>
+        <h4>Chape préparée prête à l'emploi COECK</h4>
+        <p id='result-screed'>Quantité de chape: </p>
+        <p id='result-screed-bag'>Nombre de sacs de 25kg: </p>
+      </div>
+      <div class='wrapper-by-bag'>
+        <div class='wrapper-by-bag-item'>
+          <h4>
+            Quantité de ciment:
+            <span id='result-cement'></span>
+          </h4>
+          <div class='wrapper-by-bag-item-elem'>
+            <p id='result-cement-bag-25'>Nombre de sacs de 25kg: </p>
+            <p id='result-cement-bag-40'>Nombre de sacs de 40kg: </p>
+          </div>
+        </div>
+
+        <div class='wrapper-by-bag-item'>
+          <h4>
+            Quantité de sable du Rhin:
+            <span id='result-sand'></span>
+          </h4>
+          <div class='wrapper-by-bag-item-elem'>
+            <p id='result-sand-bag-25'>Nombre de sacs de 25kg: </p>
+            <p id='result-sand-bag-40'>Nombre de sacs de 40kg: </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>
+<script src='../javascript/calculateScreed.js'></script>
+</body>
+</html>

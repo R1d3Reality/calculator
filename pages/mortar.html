@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <link rel='stylesheet' href='../styles/style.css'>
+</head>
+<body>
+<div class='container'>
+  <form class='calculator'>
+    <h3 class='title'>
+      Consommation mortier à maçonner en litre/m2 par type de pierre
+    </h3>
+    <h4>
+      <label for='surface-mur'>
+        Surface du mur (m2)
+      </label>
+      <input type='number' id='surface-mur' placeholder='Surface du mur' />
+    </h4>
+    <label for="bloc">
+      Bloc
+    </label>
+    <select id='bloc' onchange="getSelectedValue()">
+      <option value='' disabled selected hidden>Choisir la bonne taille de bloc</option>
+      <optgroup label='Bloc treillis / Bloc beton creux. Hauter 9cm'>
+        <option value="23">29x09x09</option>
+        <option value="36">29x14x09</option>
+        <option value="49">29x19x09</option>
+      </optgroup>
+
+      <optgroup label='Bloc treillis / Bloc beton creux. Hauter 14cm'>
+        <option value="18">29x09x14</option>
+        <option value="27">29x14x14</option>
+        <option value="37">29x19x14</option>
+      </optgroup>
+
+      <optgroup label='Bloc treillis / Bloc beton creux. Hauter 19cm'>
+        <option value="15">29x09x19</option>
+        <option value="23">29x14x19</option>
+        <option value="31">29x19x19</option>
+      </optgroup>
+
+      <optgroup label='Bloc treillis / Bloc beton creux. Hauter 19cm'>
+        <option value="13">39x09x19</option>
+        <option value="21">39x14x19</option>
+        <option value="28">39x19x19</option>
+      </optgroup>
+
+      <optgroup label='Bloc beton plein. Hauter 14cm'>
+        <option value="13">29x09x14</option>
+        <option value="20">29x14x14</option>
+        <option value="28">29x19x14</option>
+      </optgroup>
+
+      <optgroup label='Bloc beton plein. Hauter 19cm'>
+        <option value="11">29x09x19</option>
+        <option value="17">29x14x19</option>
+        <option value="23">29x19x19</option>
+      </optgroup>
+
+      <optgroup label='Bloc beton plein. Hauter 19cm'>
+        <option value="10">39x09x19</option>
+        <option value="15">39x14x19</option>
+        <option value="21">39x19x19</option>
+      </optgroup>
+    </select>
+    <div class='wrapper'>
+      <span id='result-mortar-bag'>Nombre de sacs de 25kg: </span>
+    </div>
+  </form>
+</div>
+</body>
+<script src='../javascript/calculateMortar.js'></script>
+</html>

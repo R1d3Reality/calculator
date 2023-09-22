@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel='stylesheet' href='../styles/style.css'>
+</head>
+<body>
+<div class='container'>
+    <form class='calculator'>
+        <h3 class='title'>
+            Faux Plafond
+        </h3>
+        <h4>
+            <label for='ceiling-width'>
+                Largeur du plafond
+            </label>
+        </h4>
+        <input type='number' id="ceiling-width" placeholder='Largeur du plafond'>
+        <h4>
+            <label for='ceiling-length'>
+                Longueur du plafond
+            </label>
+        </h4>
+        <input type='number' id='ceiling-length' placeholder='Longueur du plafond'>
+        <div class='wrapper-plafond'>
+            <div class='wrapper-elem'>
+                <h4>
+                    Porteur:
+                </h4>
+                <span id='result-holder'></span>
+                <h4>
+                    Contour:
+                </h4>
+                <span id='result-outline'></span>
+            </div>
+
+            <div class='wrapper-elem'>
+                <h4>
+                    Suspente:
+                </h4>
+                <span id='result-suspension'></span>
+                <h4>
+                    Cavalier:
+                </h4>
+                <span id='result-cavalier'></span>
+            </div>
+        </div>
+    </form>
+</div>
+</body>
+<script src='../javascript/calculateResultCeiling.js'></script>
+</html>
