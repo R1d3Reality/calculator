@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Consommation de joints de carrelage</title>
+    <link rel='stylesheet' href='../styles/style.css'>
+</head>
+<body>
+<div class='container'>
+    <form class='calculator'>
+        <h3 class='title'>
+            Consommation de joints de carrelage Keracolor FF
+        </h3>
+        <h4>
+            <label for ='tiles-length'>
+                Longueur de carrelage en mm
+            </label>
+        </h4>
+        <input type='number' id="tiles-length" placeholder='Longueur en mm'>
+        <h4>
+            <label for='tiles-width'>
+                Largeur de carrelage en mm
+            </label>
+        </h4>
+        <input type='number' id='tiles-width' placeholder='Largeur en mm'>
+        <h4>
+            <label for='tiles-thick'>
+                Epaisseur de carrelage en mm
+            </label>
+        </h4>
+        <input type='number' id='tiles-thick' placeholder='Epaisseur en mm'>
+        <h4>
+            <label for='joint-width'>
+                Largeur des joints en mm
+            </label>
+        </h4>
+        <input type='number' id='joint-width' placeholder='Largeur des joints en mm' >
+        <h4>
+            <label for='surface-keracolor'>
+                Surface du travail m2
+            </label>
+        </h4>
+        <input type='number' id='surface-keracolor' placeholder='Surface du travail'>
+        <span id='result-keracolor'>Nombre de sacs de 5kg: </span>
+    </form>
+</div>
+
+</body>
+<script src='../javascript/calculateKeracolor.js'></script>
+</html>
