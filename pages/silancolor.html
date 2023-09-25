@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel='stylesheet' href='../styles/style.css'>
+    <title>Document</title>
+</head>
+<body>
+<div class='container'>
+    <form class='calculator'>
+        <h3 class='title'>
+            Mapei Silancolor
+        </h3>
+        <h4>
+            <label for='silancolor'>
+                Choisir la granulation de crépis à utiliser
+            </label>
+        </h4>
+        <select id='silancolor' onchange='calculateSilancolor()'>
+            <option value='' disabled selected hidden=''>
+                Sélectionnez un produit Mapei
+            </option>
+            <option value='1.85'>Mapei Silancolor 0.7mm</option>
+            <option value='2.4'>Mapei Silancolor 1.5 mm</option>
+            <option value='3.25'>Mapei Silancolor 2.0 mm</option>
+        </select>
+        <h4>
+            <label for='surface-silancolor'>
+                Surface (m2)
+            </label>
+        </h4>
+        <input type='number' id='surface-silancolor' placeholder='Surface'>
+        <span id='result-silancolor'></span>
+    </form>
+</div>
+
+</body>
+<script src='../javascript/calculateSilancolor.js'></script>
+</html>

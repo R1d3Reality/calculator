@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Calcul du nombre de paquets de carrelage</title>
+    <link rel='stylesheet' href='../styles/style.css'>
+</head>
+<body>
+<div class='container'>
+    <form class='calculator'>
+        <h3 class='title'>
+            Calcul du nombre de paquets de carrelage
+        </h3>
+        <h4>
+            <label for='tiles'>
+                Sélectionner un format de carrelage
+            </label>
+        </h4>
+        <select id='tiles' onchange='calculateTiles()'>
+            <option value='' disabled selected hidden=''>Sélectionner un format</option>
+            <option value='0.5'>7.5x15</option>
+            <option value='1'>15x15</option>
+            <option value='1'>10x20</option>
+            <option value='1.5'>25x40</option>
+            <option value='0.9'>30x60 (0.9 m2)</option>
+            <option value='1.44'>30x60 (1.44m2)</option>
+            <option value='1.38'>48x48</option>
+            <option value='1.44'>60x60</option>
+            <option value='1.44'>60x120</option>
+        </select>
+        <div class='wrapper'>
+            <h4>
+                <label for='surface-tiles'>
+                    Espace de travail m2
+                </label>
+            </h4>
+            <input type='number' id='surface-tiles' placeholder='Espace de travail'>
+        </div>
+        <span id='result-tiles'></span>
+    </form>
+</div>
+</body>
+<script src='../javascript/calculateTiles.js'></script>
+</html>

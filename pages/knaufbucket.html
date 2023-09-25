@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Consommation Knauf Fill & Finish et Super Finish</title>
+    <link rel='stylesheet' href='../styles/style.css'>
+</head>
+<body>
+<div class='container'>
+    <form class='calculator'>
+        <h3 class='title'>
+            Consommation Knauf Fill & Finish et Super Finish
+        </h3>
+        <h4>
+            <label for='knauf'>
+                Sélectionner un produit
+            </label>
+        </h4>
+        <select id='knauf' onchange='calculateKnauf()'>
+            <option value='' disabled selected hidden=''>
+                Sélectionner un produit
+            </option>
+            <option value='0.3'>Knauf Fill & Finish</option>
+            <option value='1.6'>Knauf Super Finish</option>
+        </select>
+        <h4>
+            <label for='surface-knauf'>
+                Surface du mur (m2)
+            </label>
+        </h4>
+        <input type='number' id='surface-knauf' placeholder='Surface du mur' />
+        <span id='result-knauf'>Nombre de seaux nécessaires: </span>
+    </form>
+</div>
+
+</body>
+<script src='../javascript/calculateKnauf.js'></script>
+</html>
