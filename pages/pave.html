@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Calcul des paves pour une surface</title>
+    <link rel='stylesheet' href='../styles/style.css'>
+</head>
+<body>
+<div class='container'>
+    <form class='calculator'>
+        <h3 class='title'>
+            Calcul des paves pour une surface
+        </h3>
+        <h4>
+           <label for='pave-length'>
+               Longueur de pave en cm
+           </label>
+        </h4>
+        <input type='number' id='pave-length' placeholder='Longueur en cm' />
+        <h4>
+           <label for='pave-width'>
+               Largeur de pave en cm
+           </label>
+        </h4>
+        <input type='number' id='pave-width' placeholder='Largeur en cm'>
+        <h4>
+            <label for='pave-surface'>
+                Espace de travail m2
+            </label>
+        </h4>
+        <input type='number' id='pave-surface' placeholder='Espace de travail'>
+        <span id='result-pave'>Nombre de paves nécessaire: </span>
+        <p></p>
+    </form>
+</div>
+</body>
+<script src='../javascript/calculatePave.js'></script>
+</html>
