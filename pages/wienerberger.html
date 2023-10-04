@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wienerberger</title>
+    <link rel='stylesheet' href='../styles/style.css'>
+</head>
+<body>
+<div class='container'>
+    <form class='calculator'>
+        <h3>Calculatrice quantité</h3>
+        <label for="colorSelect">Sélectionnez une brique:</label>
+        <select id="colorSelect">
+            <optgroup label='Agora'>
+                <option value='GrisAgate'>Agora Gris Agate</option>
+                <option value='NoirGraphite'>Agora Noir Graphite</option>
+                <option value="BlancBouillard">Agora Blanc Bouillard </option>
+                <option value='SuperBlanc'>Agora Super Blanc</option>
+                <option value='GrisTitane'>Agora Gris Titane</option>
+                <option value="BlancIvoire">Agora Blanc Ivoire
+                <option value='GrisArgente'>Agora Gris Argente</option>
+            </optgroup>
+            <optgroup label='Amfora'>
+                <option value='Castana'>Amfora Castana</option>
+                <option value='BeigeDuna'>Amfora Beige Duna</option>
+                <option value='GrisMisto'>Amfora Gris Misto</option>
+                <option value='BlancPuro'>Amfora Blanc Puro</option>
+                <option value='GrisRino'>Amfora Gris Rino</option>
+                <option value='Rubino'>Amfora Rubino</option>
+                <option value='GrisSilvo'>Amfora Gris Silvo</option>
+                <option value='Zafferano'>Amfora Zafferano</option>
+            </optgroup>
+            <optgroup label='Arces'>
+                <option value='RougeCandy'>Arces Rouge Candy</option>
+                <option value='JauneCorn'>Arces Jaune Corn</option>
+                <option value='GrisMoon'>Arces Gris Moon</option>
+            </optgroup>
+            <optgroup label='Archipolis'>
+                <option value='GrisArgo'>Archipolis Gris Argo</option>
+                <option value='BrunBarn'>Archipolis Brun Barn</option>
+                <option value='GrisByblos'>Archipolis Gris Byblos</option>
+                <option value='GrisFrost'>Archipolis Gris Frost</option>
+                <option value='BlancNemo'>Archipolis Blanc Nemo</option>
+                <option value='BeigeTilis'>Archipolis Beige Tilis</option>
+                <option value='BeigeTornis'>Archipolis Beige Tornis</option>
+                <option value='JauneVegas'>Archipolis Jaune Vegas</option>
+            </optgroup>
+            <optgroup label='Artiza'>
+                <option value='Colorada'>Artiza Colorada</option>
+                <option value='Hectic'>Artiza Hectic</option>
+                <option value='MaaseikerBont'>Artiza Maaseiker Bont</option>
+                <option value='BleuMauveEscarbille'>Artiza Bleau Mauve Escarbille</option>
+                <option value='VeldbrandAntique'>Artiza Veldbrand Antique</option>
+                <option value='VeldbrandExterieur'>Artiza Veldbrand Exterieur</option>
+            </optgroup>
+            <optgroup label='Avolto'>
+                <option value='RougeJado'>Avolto Rouge Jado</option>
+                <option value='JauneMuria'>Avolto Jaune Muria</option>
+                <option value='Greige Nila'>Avolto Greige Nila</option>
+                <option value='GrisRemo'>Avolto Gris Remo</option>
+                <option value='GreigeSalina'>Avolto Greige Salina</option>
+            </optgroup>
+            <optgroup label='Basia'>
+                <option value='NeroNoirManganese'>Basia Nero Noir Manganese</option>
+                <option value='Paepesteen'>Basia Paepesteen</option>
+                <option value='Plaza'>Basia Plaza</option>
+                <option value='RougeEpagnol'>Basia Rouge Espagnol</option>
+                <option value='FleurDePaille'>Basia Fleur de Paille</option>
+            </optgroup>
+            <optgroup label="Belle Epoque">
+                <option value='DeDurbuy'>Belle Epoque de Durbuy</option>
+                <option value='DeLiege'>Belle Epoque de Liege</option>
+                <option value='DeMons'>Belle Epoque de Mons</option>
+                <option value='DeNamur'>Belle Epoque de Namur</option>
+            </optgroup>
+            <optgroup label="Brique ordinaire">
+                <option value='RougePerforations'>Brique Ordinaire Rouge Perforations</option>
+                <option value='RougePlein'>Brique Oridnaire Rouge Plein</option>
+            </optgroup>
+            <optgroup label='Cassia'>
+                <option value='Rouge'>Cassia Rouge</option>
+                <option value='CassiaNoirGraphite'>Cassia Noir Graphite</option>
+            </optgroup>
+            <optgroup label='Classo'>
+                <option value='Alverna'>Classo Alverna</option>
+                <option value='BlauwRoodGenuanceerd'>Classo Blauw-Rood Genuanceerd</option>
+                <option value='BlauwRoodGenuanceerdGesinterd'>Classo Blauw-Rood Genuanceerd Gesinterd</option>
+                <option value='BronzeRustique'>Classo Bronze Rustique</option>
+            </optgroup>
+            <optgroup label="Colorline">
+                <option value='DYpres'>Colorline Rouge Sablée d'Ypres</option>
+                <option value='DeCampine'>Colorline Rouge Sablée de Campine</option>
+                <option value='LisseDeCampine'>Colorline Lisse de Campine</option>
+                <option value='NuanceeDeCampine'>Colorline Rouge Lisse Nuancée de Campine</option>
+                <option value='EcorceSableeDeCampine'>Colorline Rouge Ecorcé Sablée de Campine</option>
+                <option value='RougeWanlin'>Colorline Rouge Wanlin</option>
+            </optgroup>
+            <optgroup label='Domus'>
+                <option value='CasaLena'>Domus Casa Lena</option>
+                <option value='Colombe'>Domus Colombe </option>
+            </optgroup>
+            <optgroup label='Elignia'>
+                <option value='BlancArctice'>Elignia Blanc Arctice</option>
+                <option value='Betula'>Elignia Betula</option>
+                <option value='GrisMagma'>Elignia Gris Magma</option>
+                <option value='GrisNebula'>Elignia Gris Nebula</option>
+                <option value='BlancNordica'>Elignia Blanc Nordica</option>
+                <option value='Robinia'>Elignia Robinia</option>
+                <option value='GreigeSilva'>Elignia Greige Silva</option>
+                <option value='NoirWenga'>Elignia Noir Wenga</option>
+            </optgroup>
+            <optgroup label='Forum'>
+                <option value='Branco'>Forum Branco</option>
+                <option value='Pampas'>Forum Pampas</option>
+                <option value='Prata'>Forum Prata</option>
+                <option value='PrataNuance'>Forum Prata Nuancé</option>
+            </optgroup>
+            <optgroup label='Briques Emaillées'>
+                <option value='Bleu'>Briques Emaillées Bleu</option>
+                <option value='Jaune'>Briques Emaillées Jaune</option>
+                <option value='Vert'>Briques Emaillées Vert</option>
+                <option value='RougeEmaillees'>Briques Emaillées Rouge</option>
+                <option value='Blanc'>Briques Emaillées Blanc</option>
+                <option value='Noir'>Briques Emaillées Noir</option>
+            </optgroup>
+            <optgroup label='Iberia'>
+                <option value='Andalucia'>Iberia Andalucia</option>
+                <option value='Asturia'>Iberia Asturia</option>
+                <option value='Catalunya'>Iberia Catalunya</option>
+                <option value='Galicia'>Iberia Galicia</option>
+                <option value='Navarra'>Iberia Navarra</option>
+            </optgroup>
+            <optgroup label='Imperium'>
+                <option value='Albius'>Imperium Albius</option>
+                <option value='Flavius'>Imperium Flavius</option>
+                <option value='Nerus'>Imperium Nerus</option>
+                <option value='Notus'>Imperium Notus</option>
+            </optgroup>
+            <optgroup label='Linaqua'>
+                <option value='Vino'>Linaqua Vino</option>
+                <option value='Viola'>Linaqua Viola</option>
+            </optgroup>
+            <optgroup label='Marono'>
+                <option value='BrunExtra'>Marono Brun Extra</option>
+                <option value='Etouffe'>Marono Etouffé</option>
+                <option value='EtouffeExtra'>Marono Etouffé Extra</option>
+                <option value='MoronoRouge'>Marono Rouge</option>
+                <option value='RougeExtra'>Marono Rouge Extra</option>
+            </optgroup>
+            <optgroup label='Metropolis'>
+                <option value='RougeAtrium'>Metropolis Rouge Atrium</option>
+                <option value='RougeAula'>Metropolis Rouge Aula</option>
+                <option value='BrunCivitas'>Metropolis Brun Civitas</option>
+                <option value='NoirColonia'>Metropolis Noir Colonia</option>
+                <option value='BlancDover'>Metropolis Blanc Dover</option>
+                <option value='GrisSonic'>Metropolis Gris Sonic</option>
+                <option value='BrunUrbis'>Metropolis Brun Urbis</option>
+                <option value='NoirVesta'>Metropolis Noir Vesta</option>
+            </optgroup>
+            <optgroup label='Milosa'>
+                <option value='CosmosExclusief'>Milosa Cosmos Exclusief </option>
+                <option value='Goudsbloem'>Milosa Goudsbloem</option>
+                <option value='Hoornbloem'>Milosa Hoornbloem</option>
+                <option value='Kogelbloem'>Milosa Kogelbloem</option>
+                <option value='Passiebloem'>Milosa Passiebloem</option>
+            </optgroup>
+            <optgroup label='Nubilum'>
+                <option value='GreigeClarus'>Nubilum Greige Clarus</option>
+                <option value='BlancHelios'>Nubilum Blanc Helios</option>
+                <option value='GrisSaturn'>Nubilum Gris Saturn</option>
+                <option value='GreigeStratus'>Nubilum Greige Stratus</option>
+                <option value='BeigeVelum'>Nubilum Beige Velum</option>
+            </optgroup>
+            <optgroup label='Pagus'>
+                <option value='Brun'>Pagus Brun</option>
+                <option value='BrunNoir'>Pagus Brun-Noir</option>
+                <option value='RougeFonce'>Pagus Rouge Foncé</option>
+                <option value='Gris'>Pagus Gris</option>
+                <option value='GrisNoir'>Pagus Gris-Noir</option>
+            </optgroup>
+            <optgroup label='Patrimonia'>
+                <option value='FleurDePommier'>Patrimonia Fleur de Pommier</option>
+                <option value='Barok83'>Patrimonia Barok 83</option>
+                <option value='NeoRomaans'>Patrimonia Neo Romaans</option>
+                <option value='Opus'>Patrimonia Opus</option>
+                <option value='VieuxRieme'>Patrimonia Vieux Rieme</option>
+                <option value='VieuxRomaans'>Patrimonia Vieux Romaans</option>
+                <option value='Pastorale'>Patrimonia Pastorale</option>
+                <option value='Renaissance'>Patrimonia Renaissance</option>
+            </optgroup>
+            <optgroup label='Recup'>
+                <option value='BalenseRecup'>Balense Recup</option>
+                <option value='BoomseRecup'>Boomse Recup</option>
+                <option value='BrabantseRecup'>Brabantse Recup</option>
+                <option value='DesselseRecup'>Desselse Recup</option>
+                <option value='MaalbergseRV'>Maalbergse RV</option>
+                <option value='MeerseRecup'>Meerse Recup</option>
+                <option value='MolenlandseRV'>Molenladse RV</option>
+                <option value='OlenseRecup'>Olense Recup</option>
+                <option value='RodelandseRV'>Rodelandse RV</option>
+                <option value='RupelseRV'>Rupelse RV</option>
+                <option value='TongerseRV'>Tongerse RV</option>
+                <option value='ZevendonkseRV'>Zevendonkse RV</option>
+            </optgroup>
+            <optgroup label='Retro'>
+                <option value='Lautrec'>Retro Lautrec</option>
+                <option value='Pastorie'>Retro Pastorie</option>
+                <option value='Tiffany'>Retro Tiffany</option>
+            </optgroup>
+            <optgroup label='Rustica'>
+                <option value='OudBachte'>Rustica Oud Bachte</option>
+                <option value='OudDamme'>Rustica Oud Damme</option>
+                <option value='OudKempisch'>Rustica Oud Kempisch</option>
+                <option value='OudMalle'>Rustica Oud Malle</option>
+                <option value='OudeVeldsteen'>Rustica Oude Veldsteen</option>
+            </optgroup>
+            <optgroup label='Tolus'>
+                <option value='GrisJade'>Tolus Gris Jade</option>
+                <option value='PourpreMaya'>Tolus Pourpre Maya</option>
+                <option value='JauneMint'>Tolus Jaune Mint</option>
+                <option value='GrisTan'>Tolus Gris Tan</option>
+            </optgroup>
+            <optgroup label='Wasserstrich Special'>
+                <option value='BlancAlaska'>Wasserstrich Blanc Alaska</option>
+                <option value='RougeAtica'>Wasserstrich Rouge Atica</option>
+                <option value='Ecru'>Wasserstrich Ecru</option>
+                <option value='GrisGloom'>Wasserstrich Gris Gloom</option>
+                <option value='WasserstrichGris'>Wasserstrich Gris</option>
+                <option value='RougeCarmin'>Wasserstrich Rouge Carmin</option>
+                <option value='GrisQuartz'>Wasserstrich Gris Quartz</option>
+                <option value='RougeOrient'>Wasserstrich Rouge Orient</option>
+                <option value='WasserstrichRouge'>Wasserstrich Rouge</option>
+                <option value='Sable'>Wasserstrich Sable</option>
+                <option value='GrisSilt'>Wasserstrich Gris Silt</option>
+                <option value='GrisSuria'>Wasserstrich Gris Suria</option>
+                <option value='BlancVanille'>Wasserstrich Blanc Vanille</option>
+                <option value='NoirDeVolcan'>Wasserstrich Noir de Volcan</option>
+                <option value='WasserstrichNoir'>Wasserstrich Noir</option>
+            </optgroup>
+        </select>
+        <label for="modelSelect">Style de brique:</label>
+        <select id="modelSelect">
+
+        </select>
+        <div class='wrapper'>
+            <h4>
+                <label for='surface-brick'>
+                    Espace de travail m2
+                </label>
+            </h4>
+            <input type='number' id='surface-brick' placeholder='Espace de travail'>
+        </div>
+        <div class='wrapper-by-bag-item'>
+            <span id='result-brick'>Pour joint 12mm: nombre de pièces: 0 pcs, nombre de palettes 0 palettes</span>
+        </div>
+        <div class='wrapper-by-bag-item'>
+            <span id='result-brick5'>Pour joint 5mm: nombre de pièces: 0 pcs, nombre de palettes 0 palettes</span>
+        </div>
+    </form>
+</div>
+</body>
+<script src='../javascript/calculateWienerberger.js'></script>
+</html>

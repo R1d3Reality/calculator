@@ -1,19 +1,22 @@
-
 const inputSurfaceBloc = document.getElementById('surface-mur');
 const resultMortier = document.getElementById('result-mortar-bag');
+const selectBloc = document.getElementById('bloc');
 
-inputSurfaceBloc.addEventListener('input', getSelectedValue);
+inputSurfaceBloc.addEventListener('input', calculateMortier);
 
+function calculateMortier() {
+    const selectedValue = parseFloat(selectBloc.value) || 0;
+    const surfaceArea = parseFloat(inputSurfaceBloc.value) || 0;
 
-function getSelectedValue () {
-    const selectElement = document.getElementById('bloc');
-    const selectedValue = selectElement.value;
+    const bagsRequired = calculateBagsRequired(surfaceArea, selectedValue);
 
+    updateResult(bagsRequired);
+}
 
-    const valueSurfaceBloc = parseFloat(inputSurfaceBloc.value) || 0;
+function calculateBagsRequired(surfaceArea, selectedValue) {
+    return Math.ceil(surfaceArea / (17 / selectedValue));
+}
 
-
-    const resultBagMortar = Math.ceil(valueSurfaceBloc / (17 / selectedValue));
-
-    resultMortier.textContent = `Nombre de sacs de 25kg: ${resultBagMortar} pcs`
+function updateResult(bagsRequired) {
+    resultMortier.textContent = `Nombre de sacs de 25kg: ${bagsRequired} pcs`;
 }

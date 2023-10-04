@@ -27,24 +27,26 @@
         </h4>
         <input type='number' id='width-roof' placeholder='Largeur en m'>
         <h4>
-            <label for ='roof-tiles'>
-                Sélectionner un modèle de tuile en terre cuite
-            </label>
-        </h4>
-        <select id='roof-tiles' onchange='calculateRoofTiles()'>
-            <option disabled selected hidden=''>Modèles de tuile</option>
-            <option value='0.345'>Actua</option>
-            <option value='0.278'>Pottelberg</option>
-        </select>
-        <h4>
             <label for='distance-roof'>
                 Distance entre les chevrons (cm)
             </label>
         </h4>
         <input type='number' id='distance-roof' placeholder='Distance en cm'>
-        <span id='result-roof-tiles'>Le nombre de tuiles en terre cuite: 0 pcs</span>
-        <span id='result-roof-lathing'>Nombre de mètres de lattes: 0 lm</span>
-        <span id='result-roof-slast'></span>
+        <h4>
+            <label for ='roof-tiles'>
+                Sélectionner un modèle de tuile en terre cuite
+            </label>
+        </h4>
+        <select id='roof-tiles' onchange='calculateRoof()'>
+            <option disabled selected hidden=''>Modèles de tuile</option>
+            <option value='0.345'>Actua</option>
+            <option value='0.278'>Pottelberg</option>
+        </select>
+        <div class='wrapper'>
+            <span id='result-roof-tiles'>Le nombre de tuiles en terre cuite: 0 pcs</span>
+            <span id='result-roof-lathing'>Nombre de mètres de lattes: 0 lm</span>
+            <span id='result-roof-slast'>Nombre de mètres de contre-lattes: 0 lm</span>
+        </div>
     </form>
 </div>
 

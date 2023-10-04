@@ -20,7 +20,7 @@
     <label for="bloc">
       Bloc
     </label>
-    <select id='bloc' onchange="getSelectedValue()">
+    <select id='bloc' onchange='calculateMortier()'>
       <option value='' disabled selected hidden=''>Choisir la bonne taille de bloc</option>
       <optgroup label='Bloc treillis / Bloc beton creux. Hauter 9cm'>
         <option value="23">29x09x09</option>
@@ -65,7 +65,7 @@
       </optgroup>
     </select>
     <div class='wrapper'>
-      <span id='result-mortar-bag'>Nombre de sacs de 25kg: </span>
+      <span id='result-mortar-bag'>Nombre de sacs de 25kg: 0 pcs</span>
     </div>
   </form>
 </div>

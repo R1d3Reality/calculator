@@ -5,34 +5,50 @@ const resultRoof = document.getElementById('result-roof-tiles');
 const resultLathing = document.getElementById('result-roof-lathing');
 const resultSlast = document.getElementById('result-roof-slast');
 
-inputLengthRoof.addEventListener('input', calculateRoofTiles);
-inputWidthRoof.addEventListener('input', calculateRoofTiles);
-inputDistanceRoof.addEventListener('input', calculateRoofTiles);
+function calculateSurfaceValue(length, width) {
+    return Math.ceil(length * width);
+}
 
-function calculateRoofTiles () {
-    const selectedElement = document.getElementById('roof-tiles');
-    const selectedValue = parseFloat(selectedElement.value) || 0;
+function calculateRoofTiles(surfaceValue, selectedValue) {
+    const tileData = {
+        0.345: 11.2,
+        0.278: 18.6,
+    };
 
-    const lengthValue = parseFloat(inputLengthRoof.value) || 0;
-    const widthValue = parseFloat(inputWidthRoof.value) || 0;
-    const distanceValue = parseFloat(inputDistanceRoof.value) || 0;
+    return Math.ceil(surfaceValue * tileData[selectedValue] || 0);
+}
 
-    const surfaceValue = Math.ceil(lengthValue * widthValue);
+function calculateLathing(length, width, selectedValue) {
+    return Math.ceil((width / selectedValue) * length);
+}
 
-    let roofTilesPcs, lathingLm, slastLm;
+function calculateSlast(length, distance) {
+    return Math.ceil((length / (distance / 100)));
+}
 
-    if (selectedValue === 0.345) {
-        roofTilesPcs = Math.ceil(surfaceValue * 11.2);
+function validateInput(input) {
+    const value = parseFloat(input.value);
+    return !isNaN(value) && value > 0;
+}
+
+function calculateRoof() {
+    if (!validateInput(inputLengthRoof) || !validateInput(inputWidthRoof) || !validateInput(inputDistanceRoof)) {
+        alert('Please enter valid numeric values for length, width, and distance.');
+        return;
     }
-    if (selectedValue === 0.278) {
-        roofTilesPcs = Math.ceil(surfaceValue * 18.6);
-    }
 
-    resultRoof.textContent = `Le nombre la tuile en terre cuite ${roofTilesPcs} pcs`;
+    const lengthValue = parseFloat(inputLengthRoof.value);
+    const widthValue = parseFloat(inputWidthRoof.value);
+    const distanceValue = parseFloat(inputDistanceRoof.value);
+    const selectedValue = parseFloat(document.getElementById('roof-tiles').value) || 0;
 
-    lathingLm = Math.ceil((widthValue / selectedValue) * lengthValue);
+    const surfaceValue = calculateSurfaceValue(lengthValue, widthValue);
+    const roofTilesPcs = calculateRoofTiles(surfaceValue, selectedValue);
+    const lathingLm = calculateLathing(lengthValue, widthValue, selectedValue);
+    const slastLm = calculateSlast(lengthValue, distanceValue);
+
+    resultRoof.textContent = `Le nombre de tuiles en terre cuite: ${roofTilesPcs} pcs`;
     resultLathing.textContent = `Nombre de mètres de lattes: ${lathingLm} lm`;
-
-    slastLm = Math.ceil((lengthValue / (distanceValue / 100)) * widthValue);
     resultSlast.textContent = `Nombre de mètres de contre-lattes: ${slastLm} lm`;
 }
+

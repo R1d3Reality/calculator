@@ -17,6 +17,7 @@ header {
   align-items: center;
   justify-content: center;
   margin: 5% auto;
+  width: 100%;
 }
 img {
   display: flex;
@@ -26,14 +27,22 @@ img {
   align-items: center;
 }
 
+h4 {
+  margin: 0 auto;
+}
+
 .navigation {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   width: 100%;
-  justify-content: center;
-  align-items: center;
-  gap: 30px;
-  padding-top: 25%;
+  justify-content: space-evenly;
+  padding-top: 5%;
+
+  &-group {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
 
   a {
     text-decoration: none;
@@ -104,7 +113,7 @@ img {
   padding-top: 2%;
 }
 
-input {
+select, input {
   width: 100%;
   padding: 12px 20px;
   margin: 8px 0;

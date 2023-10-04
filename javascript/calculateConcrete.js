@@ -1,4 +1,3 @@
-//const for Concrete (Beton)
 const surfaceInputConcrete = document.getElementById('surface-concrete');
 const thickInputConcrete = document.getElementById('thick-concrete');
 
@@ -17,20 +16,13 @@ const resultConcreteGravel = document.getElementById('result-gravel');
 const resultConcreteGravel25 = document.getElementById('result-gravel-bag-25');
 const resultConcreteGravel40 = document.getElementById('result-gravel-bag-40');
 
-
-
 surfaceInputConcrete.addEventListener('input', calculateResultConcrete);
 thickInputConcrete.addEventListener('input', calculateResultConcrete);
 
-function calculateResultConcrete() {
-    const surfaceVolumeConcrete = parseFloat(surfaceInputConcrete.value) || 0;
-    const thickVolumeConcrete = parseFloat(thickInputConcrete.value) || 0;
-    const volumeValueConcrete = surfaceVolumeConcrete * (thickVolumeConcrete / 100);
-
-
-    const valueConcrete = Math.round(((volumeValueConcrete * 1000) / 13) * 25);
+function calculateConcreteValues(volumeValueConcrete) {
+    const valueConcrete = Math.round((volumeValueConcrete * 1000) / 13);
     const valueConcreteInBag = Math.ceil(valueConcrete / 25);
-    resultConcrete.textContent = `Quantité de beton: ${valueConcrete} Kg`;
+    resultConcrete.textContent = `Quantité de béton: ${valueConcrete} Kg`;
     resultConcreteInBag.textContent = `Nombre de sacs de 25kg: ${valueConcreteInBag} pcs`;
 
     const valueCement = Math.ceil(volumeValueConcrete * 350);
@@ -45,7 +37,7 @@ function calculateResultConcrete() {
     const valueSandBag25 = Math.ceil(valueSand / 25);
     resultConcreteSand25.textContent = `Nombre de sacs de 25kg: ${valueSandBag25} pcs`;
     const valueSandBag40 = Math.ceil(valueSand / 40);
-    resultConcreteSand40.textContent = `Nombre de sacs de 40kg: ${valueCementBag40} pcs`;
+    resultConcreteSand40.textContent = `Nombre de sacs de 40kg: ${valueSandBag40} pcs`;
 
     const valueGravel = Math.ceil(volumeValueConcrete * 1000);
     resultConcreteGravel.textContent = `${valueGravel} kg`;
@@ -53,4 +45,12 @@ function calculateResultConcrete() {
     resultConcreteGravel25.textContent = `Nombre de sacs de 25kg: ${valueGravelBag25} pcs`;
     const valueGravelBag40 = Math.ceil(valueGravel / 40);
     resultConcreteGravel40.textContent = `Nombre de sacs de 40kg: ${valueGravelBag40} pcs`;
+}
+
+function calculateResultConcrete() {
+    const surfaceVolumeConcrete = parseFloat(surfaceInputConcrete.value) || 0;
+    const thickVolumeConcrete = parseFloat(thickInputConcrete.value) || 0;
+    const volumeValueConcrete = (surfaceVolumeConcrete * thickVolumeConcrete) / 100;
+
+    calculateConcreteValues(volumeValueConcrete);
 }
