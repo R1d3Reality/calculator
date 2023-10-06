@@ -54,20 +54,20 @@ h4 {
 .container {
   display: flex;
   width: 100%;
-  max-width: 1080px;
+  max-width: 1440px;
   font-family: 'Montserrat', sans-serif;
   padding: 10px;
   border: 1px solid #000;
   margin: 5% auto;
 }
 .title {
-  margin: 0 auto;
+  margin: 8px auto;
 }
 .calculator {
   display: flex;
   flex-direction: column;
   width: 100%;
-  max-width: 840px;
+  max-width: 1200px;
   margin: 0 auto;
   gap: 10px;
 }
@@ -120,4 +120,17 @@ select, input {
   border: 1px solid #ccc;
   border-radius: 4px;
   box-sizing: border-box;
+}
+
+.wrapper-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 20px;
+
+  &-elem {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
 }

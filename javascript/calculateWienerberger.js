@@ -9,6 +9,47 @@ colorSelect.addEventListener('change', updateModelSelect, calculateBrick);
 modelSelect.addEventListener('change', calculateBrick);
 surfaceInputBrick.addEventListener('input', calculateBrick);
 
+function updateModelSelect() {
+    const selectedColor = colorSelect.value;
+    modelSelect.innerHTML = '';
+
+    const emptyOption = document.createElement('option');
+    emptyOption.value = '';
+    emptyOption.textContent = 'Sélectionnez la taille de la brique';
+    emptyOption.disabled = true;
+    emptyOption.selected = true;
+    modelSelect.appendChild(emptyOption);
+
+    modelsByColor[selectedColor].forEach((model) => {
+        const option = document.createElement('option');
+        if (typeof model === 'object') {
+            option.value = model.value;
+            option.textContent = model.name;
+        }
+        modelSelect.appendChild(option);
+    });
+}
+
+function calculateBrick() {
+    const selectedIndex = modelSelect.selectedIndex;
+    const selectedValue = modelsByColor[colorSelect.value][selectedIndex]?.value
+        || modelsByColor[colorSelect.value][0]?.value;
+    const selectedValueFor5 = modelsByColor[colorSelect.value][selectedIndex]?.valueFor5
+        || modelsByColor[colorSelect.value][0]?.valueFor5;
+    const selectedPal = modelsByColor[colorSelect.value][selectedIndex]?.palPcs
+        || modelsByColor[colorSelect.value][0]?.palPcs;
+
+    const surfaceValue = parseFloat(surfaceInputBrick.value) || 0;
+
+    const resultBrickPcs = Math.ceil(surfaceValue * selectedValue);
+    const resultPal = Math.ceil(resultBrickPcs/ selectedPal);
+    resultBrick.textContent = `Pour joint 12mm: nombre de pièces: ${resultBrickPcs}, nombre de palettes ${resultPal}`;
+
+    const resultBrick5Pcs = Math.ceil(surfaceValue * selectedValueFor5);
+    const resultPal5 = Math.ceil(resultBrick5Pcs / selectedPal);
+    resultBrick5.textContent = `Pour joint 5mm: nombre de pièces: ${resultBrick5Pcs}, nombre de palettes ${resultPal5}`
+}
+
 const modelsByColor = {
     GrisAgate: [
         { name: 'Eco-brick WF 215 x 65 x 50', value: 72, valuerFor5: 83, palPcs: 1014 },
@@ -604,52 +645,6 @@ const modelsByColor = {
         { name: '495 x 100 x 38', value: 40, valueFor5: 47, palPcs: 245 }
     ]
 };
-
-function updateModelSelect() {
-    const selectedColor = colorSelect.value;
-    modelSelect.innerHTML = '';
-
-    const emptyOption = document.createElement('option');
-    emptyOption.value = '';
-    emptyOption.textContent = 'Sélectionnez la taille de la brique';
-    emptyOption.disabled = true;
-    emptyOption.selected = true;
-    modelSelect.appendChild(emptyOption);
-
-    modelsByColor[selectedColor].forEach((model) => {
-        const option = document.createElement('option');
-        if (typeof model === 'object') {
-            option.value = model.value;
-            option.textContent = model.name;
-        }
-        modelSelect.appendChild(option);
-    });
-}
-
-function calculateBrick() {
-    const selectedIndex = modelSelect.selectedIndex;
-    const selectedValue = modelsByColor[colorSelect.value][selectedIndex]?.value
-        || modelsByColor[colorSelect.value][0]?.value;
-    const selectedValueFor5 = modelsByColor[colorSelect.value][selectedIndex]?.valueFor5
-        || modelsByColor[colorSelect.value][0]?.valueFor5;
-    const selectedPal = modelsByColor[colorSelect.value][selectedIndex]?.palPcs
-        || modelsByColor[colorSelect.value][0]?.palPcs;
-
-    const surfaceValue = parseFloat(surfaceInputBrick.value) || 0;
-
-    const resultBrickPcs = Math.ceil(surfaceValue * selectedValue);
-    const resultPal = Math.ceil(resultBrickPcs/ selectedPal);
-    resultBrick.textContent = `Pour joint 12mm: nombre de pièces: ${resultBrickPcs}, nombre de palettes ${resultPal}`;
-
-    const resultBrick5Pcs = Math.ceil(surfaceValue * selectedValueFor5);
-    const resultPal5 = Math.ceil(resultBrick5Pcs / selectedPal);
-    resultBrick5.textContent = `Pour joint 5
-    mm: nombre de pièces: ${resultBrick5Pcs}, nombre de palettes ${resultPal5}`
-
-
-
-
-}
 
 
 updateModelSelect();

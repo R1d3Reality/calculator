@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Калькулятор матеріалів для фасаду будинку</title>
+</head>
+<body>
+<h1>Калькулятор матеріалів для фасаду будинку</h1>
+
+<label for="numberOfWalls">Кількість стінок:</label>
+<input type="number" id="numberOfWalls" min="1" max="4">
+
+<div id="wallDimensions"></div>
+
+<button id="calculateButton">Розрахувати</button>
+
+<div id="result"></div>
+
+<script>
+    document.getElementById('numberOfWalls').addEventListener('input', function() {
+        const numberOfWalls = parseInt(this.value);
+        const wallDimensionsDiv = document.getElementById('wallDimensions');
+
+        wallDimensionsDiv.innerHTML = ''; // Очищуємо попередні введення
+
+        for (let i = 1; i <= numberOfWalls; i++) {
+            const wallDiv = document.createElement('div');
+
+            wallDiv.innerHTML = `
+          <label for="wall${i}Height">Розміри стінки ${i}:</label>
+          <input type="number" id="wall${i}Height" placeholder="Висота (метри)">
+          <input type="number" id="wall${i}Width" placeholder="Ширина (метри)">
+        `;
+
+            wallDimensionsDiv.appendChild(wallDiv);
+        }
+    });
+
+    document.getElementById('calculateButton').addEventListener('click', function() {
+        const numberOfWalls = parseInt(document.getElementById('numberOfWalls').value);
+        let totalArea = 0;
+
+        for (let i = 1; i <= numberOfWalls; i++) {
+            const wallHeight = parseFloat(document.getElementById(`wall${i}Height`).value);
+            const wallWidth = parseFloat(document.getElementById(`wall${i}Width`).value);
+
+            if (!isNaN(wallHeight) && !isNaN(wallWidth)) {
+                totalArea += wallHeight * wallWidth;
+            }
+        }
+
+        document.getElementById('result').textContent = `Площа фасаду: ${totalArea.toFixed(2)} кв. метри`;
+    });
+</script>
+</body>
+</html>

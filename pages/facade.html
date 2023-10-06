@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Calculer le matériau de la façade</title>
+    <link rel='stylesheet' href='../styles/style.css'>
+</head>
+<body>
+<div class='container'>
+    <div class='calculator'>
+        <h3 class='title'>
+            Calculer le matériau de la façade
+        </h3>
+        <label for='numberOfWalls'>Nombre de murs de façade (Entre 1 et 4)</label>
+        <input type='number' id='numberOfWalls' min='1' max='4' required>
+        <div id='wallDimensions'></div>
+        <div id='result'></div>
+        <h4>
+            <label for='window-metres'>
+                Quelle est la longueur des fenêtres ?
+            </label>
+        </h4>
+        <input type='number' id='window-metres' placeholder='Mètres linéaires'>
+        <button id='calculateButton'>Calcule</button>
+        <div class='wrapper-row'>
+            <div class='wrapper-row-elem'>
+                <h4>Materiel</h4>
+                <p id='result-isolation'>
+                    Quantité d'isolation: 0 pcs
+                </p>
+                <p id='result-pin'>
+                    Nombre de chevilles: 0 pcs
+                </p>
+                <p id='result-disc'>
+                    Nombre de rondelles: 0 pcs
+                </p>
+            </div>
+            <div class='wrapper-row-elem'>
+                <h4>Enduit et Tissu</h4>
+                <p id='result-plaster'>
+                    Tissu-platre: 0 RL
+                </p>
+                <p id='result-KS300'>
+                    KS300 (collage de l'isolation): 0 pcs
+                </p>
+                <p id='result-KZW700'>
+                    KZW700 (l'encollage et finition):  0 pcs
+                </p>
+            </div>
+            <div class='wrapper-row-elem'>
+                <h4>Crepi</h4>
+                <p id='result-primer-crepi'>
+                    Quantite primer pour crepi: 0 pcs
+                </p>
+                <p id='result-crepi'>
+                    Quantite crepi en 20kg: 0 pcs
+                </p>
+                <p id='result-crepi-25'>
+                    Quantite crepi en 25kg: 0 pcs
+                </p>
+            </div>
+            <div class='wrapper-row-elem'>
+                <h4>Corniers</h4>
+                <p id='result-cornier-vito'>
+                    Quantite profile vito avec gitex: 0 pcs
+                </p>
+                <p id='result-cornier-facade'>
+                    Quantite cornier facade: 0 pcs
+                </p>
+                <p id='result-soubassement'>
+                    Quantite profile soubassement: 0 pcs
+                </p>
+            </div>
+        </div>
+        <h3 class='title'>Peinture</h3>
+        <div class='wrapper-row'>
+            <div class='wrapper-row-elem'>
+                <h4>Nombre de seaux Sigma</h4>
+                <p id='sigma-primer'>Primer Facade Aqua 10L: 0 pcs</p>
+                <p id='sigma-peinture'>Topcoat Satin 10L: 0 pcs</p>
+            </div>
+            <div class='wrapper-row-elem'>
+                <h4>Nombre de seaux Mapei</h4>
+                <p id='mapei-primer'>Primer</p>
+                <p id='mapei-peinture'>Pittura Plus 20kg: 0 pcs</p>
+            </div>
+            <div class='wrapper-row-elem'>
+                <h4>Nombre de seaux Victoria</h4>
+                <p id='victoria-primer'>Primer Facade: 0 pcs</p>
+                <p id='victoria-facade'>Peinture(Standard / Flexfill / Silicon): 0 pcs</p>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script src='../javascript/calculateFacade.js'></script>
+</html>
