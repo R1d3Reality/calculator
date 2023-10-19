@@ -31,28 +31,32 @@ function updateModelSelect() {
 }
 
 function calculateBrick() {
-    const selectedIndex = modelSelect.selectedIndex;
+    const selectedIndex = modelSelect.selectedIndex - 1;
+    console.log(modelSelect.selectedIndex);
     const selectedValue = modelsByColor[colorSelect.value][selectedIndex]?.value
         || modelsByColor[colorSelect.value][0]?.value;
+
     const selectedValueFor5 = modelsByColor[colorSelect.value][selectedIndex]?.valueFor5
         || modelsByColor[colorSelect.value][0]?.valueFor5;
+
     const selectedPal = modelsByColor[colorSelect.value][selectedIndex]?.palPcs
         || modelsByColor[colorSelect.value][0]?.palPcs;
+
 
     const surfaceValue = parseFloat(surfaceInputBrick.value) || 0;
 
     const resultBrickPcs = Math.ceil(surfaceValue * selectedValue);
-    const resultPal = Math.ceil(resultBrickPcs/ selectedPal);
-    resultBrick.textContent = `Pour joint 12mm: nombre de pièces: ${resultBrickPcs}, nombre de palettes ${resultPal}`;
+    const resultPal = Math.ceil(resultBrickPcs / selectedPal);
+    resultBrick.textContent = `Pour joint 12mm: nombre de pièces: ${resultBrickPcs}, nombre de palettes ${resultPal}, pcs par palettes :${selectedPal}`;
 
     const resultBrick5Pcs = Math.ceil(surfaceValue * selectedValueFor5);
     const resultPal5 = Math.ceil(resultBrick5Pcs / selectedPal);
-    resultBrick5.textContent = `Pour joint 5mm: nombre de pièces: ${resultBrick5Pcs}, nombre de palettes ${resultPal5}`
+    resultBrick5.textContent = `Pour joint 5mm: nombre de pièces: ${resultBrick5Pcs}, nombre de palettes ${resultPal5}, pcs par palettes :${selectedPal}`;
 }
 
 const modelsByColor = {
     GrisAgate: [
-        { name: 'Eco-brick WF 215 x 65 x 50', value: 72, valuerFor5: 83, palPcs: 1014 },
+        { name: 'Eco-brick WF 215 x 65 x 50', value: 72, valueFor5: 83, palPcs: 1014 },
         { name: 'M50 188 x 88 x 48', value: 84, valueFor5: 98, palPcs: 780 },
         { name: 'WF 215 x 102 x 50', value: 72, valueFor5: 83, palPcs: 648 },
         { name: 'WDF 215 x 102 x 65', value: 58, valueFor5: 65, palPcs: 528 }
