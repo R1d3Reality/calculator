@@ -16,7 +16,7 @@ thickInputScreed.addEventListener('input', calculateResultScreed);
 function calculateResultScreed() {
     const surfaceValue = parseFloat(surfaceInputScreed.value) || 0;
     const thickValue = parseFloat(thickInputScreed.value) || 0;
-    const resultScreed = surfaceValue * (thickValue * 20);
+    const resultScreed = surfaceValue * (thickValue * 16);
     const resultScreedInBag =Math.floor(resultScreed / 25);
 
     const volumeValue = (surfaceValue * thickValue) / 100;
