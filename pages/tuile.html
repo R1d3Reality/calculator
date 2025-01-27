@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Calculator Tuile</title>
+  <link rel='stylesheet' href='../styles/style.css'>
+</head>
+<body>
+<div class='container'>
+  <form class='calculator'>
+    <h3 class='title'>
+      Quantite tuile pour m2
+    </h3>
+    <h4>
+      <label for='tuile'>
+        Choisir modele tuile
+      </label>
+    </h4>
+    <select id='tuile' onchange='calculateTuile()'>
+      <option value='' disabled selected hidden=''>Séléctionner un modele</option>
+      <option value='19.2'>Tuile Tempete 993(Rouge naturel)</option>
+      <option value='11.2'>Tuile Actua 10</option>
+    </select>
+    <h4>
+      <label for='surface-roof'>
+        Surface toiture
+      </label>
+    </h4>
+    <input type='number' id='surface-roof' placeholder='Surface toiture' />
+    <span id='result-tuile'>Nombre de tuile: 0 pcs</span>
+  </form>
+</div>
+</body>
+<script src='../javascript/calculateTuile.js'></script>
+</html>
