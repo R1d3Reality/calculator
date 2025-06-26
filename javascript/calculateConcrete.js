@@ -45,7 +45,7 @@ function calculateResultConcrete() {
     const valueSandBag25 = Math.ceil(valueSand / 25);
     resultConcreteSand25.textContent = `Nombre de sacs de 25kg: ${valueSandBag25} pcs`;
     const valueSandBag40 = Math.ceil(valueSand / 40);
-    resultConcreteSand40.textContent = `Nombre de sacs de 40kg: ${valueCementBag40} pcs`;
+    resultConcreteSand40.textContent = `Nombre de sacs de 40kg: ${valueSandBag40} pcs`;
 
     const valueGravel = Math.ceil(volumeValueConcrete * 1000);
     resultConcreteGravel.textContent = `${valueGravel} kg`;
